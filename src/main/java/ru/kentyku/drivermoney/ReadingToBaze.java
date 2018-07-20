@@ -4,13 +4,30 @@
  */
 package ru.kentyku.drivermoney;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author kentyku
  */
 public class ReadingToBaze {
+    
+    static final String DRIVER_NAME = "org.sqlite.JDBC";
+    static String nameDB = "sqlite.db";
+    Statement stmt;
+    PreparedStatement pstmt;
+    Connection connection;
+    ResultSet rs;
 
-    void connect() {
+    void connect() throws ClassNotFoundException, SQLException {
+         Class.forName(DRIVER_NAME);
+            connection = DriverManager.getConnection("jdbc:sqlite:" + nameDB);
+            stmt = connection.createStatement();
     //подключение к БД
     }
 
