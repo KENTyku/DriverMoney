@@ -19,21 +19,19 @@ public class Logic {
     //консольный выбор команд
     void selectcommand() throws ClassNotFoundException, SQLException {
         String command = "";
-
         while (true) {
-            System.out.println("Выберите требуемое действие");
-            //сканер для ввода команды
-            Scanner sc = new Scanner(System.in);
+            System.out.println("Выберите требуемое действие");            
+            Scanner sc = new Scanner(System.in);//сканер для ввода команды
             command = sc.nextLine();
 
-            //добавление нового водителя
+            //команда добавления нового водителя в программу
             if (command.equals("/add")) {
                 System.out.println("Выберите стратегию оплаты добавляемого водителя");
                 command = sc.nextLine();
                 if (command.equals("everymonth")) {
                     DriverMonth dm = new DriverMonth();
                     ReadingToBaze rtb = new ReadingToBaze();
-                    rtb.connect();
+                    rtb.initDB();
                     System.out.println("m");
                 }
                 if (command.equals("everyhour")) {
