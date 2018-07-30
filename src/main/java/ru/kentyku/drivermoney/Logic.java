@@ -20,7 +20,7 @@ public class Logic {
     void selectcommand() throws ClassNotFoundException, SQLException {
         String command = "";
         while (true) {
-            System.out.println("Выберите требуемое действие");            
+            System.out.println("Выберите требуемое действие");
             Scanner sc = new Scanner(System.in);//сканер для ввода команды
             command = sc.nextLine();
 
@@ -29,13 +29,18 @@ public class Logic {
                 System.out.println("Выберите стратегию оплаты добавляемого водителя");
                 command = sc.nextLine();
                 if (command.equals("everymonth")) {
-                    DriverMonth dm = new DriverMonth();
-                    ReadingToBaze rtb = new ReadingToBaze();
-                    rtb.initDB();
+                    System.out.println("Введите имя водителя:");
+                    String name = sc.nextLine();
+                    System.out.println("Введите размер помесячной оплаты:");
+                    int cost = sc.nextInt();
+                    DriverMonth dm = new DriverMonth(name, cost);
+
+                    UseDataBaze udb = new UseDataBaze();
+                    udb.initDB();
                     System.out.println("m");
                 }
                 if (command.equals("everyhour")) {
-                    DriverHour dh = new DriverHour();
+                    DriverHour dh = new DriverHour("sd",3);
                     System.out.println("h");
                 }
             }
