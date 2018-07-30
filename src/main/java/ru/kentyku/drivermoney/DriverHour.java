@@ -10,11 +10,14 @@ package ru.kentyku.drivermoney;
  */
 public class DriverHour extends Driver {
 
-    Integer HourMoney;
+   
+     DriverHour(String name,double cost){
+     this.Name=name;
+     this.cost=cost;
+    }
 
-    Double calculatemonthMoney() {
-        HourMoney = 1;
-        MonthMoney = 20.8 * 8 * HourMoney;
-        return MonthMoney;
+    Double calculateMonthMoney() {        
+        this.monthMoney=20.8 * 8 * this.cost;
+        return this.monthMoney;
     }
 }

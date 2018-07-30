@@ -10,11 +10,54 @@ package ru.kentyku.drivermoney;
  */
 public class Driver {
 
-    String Name;
-    Double MonthMoney;
+    protected String Name;//имя
+    protected Double cost;//ставка
+    protected Double monthMoney;//месячная ЗП
 
-    Double calculatemonthMoney() {
-        return MonthMoney;
+    Double calculateMonthMoney() {
+        return getCost();
 
+    }
+
+    /**
+     * @return the Name
+     */
+    public String getName() {
+        return Name;
+    }
+
+    /**
+     * @param Name the Name to set
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * @return the cost
+     */
+    public Double getCost() {
+        return cost;
+    }
+
+    /**
+     * @param cost the cost to set
+     */
+    public void setCost(Double cost) {
+        this.cost = cost;
+    }
+
+    /**
+     * @return the monthMoney
+     */
+    public Double getMonthMoney() {
+        return monthMoney;
+    }
+
+    /**
+     * @param monthMoney the monthMoney to set
+     */
+    public void setMonthMoney(Double monthMoney) {
+        this.monthMoney = monthMoney;
     }
 }

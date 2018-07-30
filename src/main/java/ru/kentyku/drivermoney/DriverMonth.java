@@ -9,8 +9,15 @@ package ru.kentyku.drivermoney;
  * @author kentyku
  */
 public class DriverMonth extends Driver {
+    
+    
+    DriverMonth(String name,double cost){
+     this.Name=name;
+     this.cost=cost;
+    }
 
-    Double calculatemonthMoney() {
-        return MonthMoney;
+    Double calculateMonthMoney() {
+        this.monthMoney=this.cost;
+        return this.monthMoney;
     }
 }
