@@ -129,7 +129,7 @@ public class Logic {
     void loadList() throws SQLException {
         //Сохраняем список водителей из БД программы в файл.
         String lineText; //для чтения из буффера        
-        System.out.println("Укажите имя файла для загрузки данных в программу");
+        System.out.println("Укажите имя файла для загрузки данных в программу(в формате .csv)");
         String filename = sc.nextLine();
         FileReader freader;
         try {
