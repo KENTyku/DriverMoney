@@ -15,7 +15,7 @@ public class DriverMoney {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException {
         Logic l=new Logic();
         l.selectcommand();        
     }
