@@ -12,7 +12,9 @@ public class Driver {
 
     protected String Name;//имя
     protected Double cost;//ставка
+    protected int typedriver;
     protected Double monthMoney;//месячная ЗП
+
 
     Double calculateMonthMoney() {
         return getCost();
@@ -59,5 +61,19 @@ public class Driver {
      */
     public void setMonthMoney(Double monthMoney) {
         this.monthMoney = monthMoney;
+    }
+
+    /**
+     * @return the typedriver
+     */
+    public int getTypedriver() {
+        return typedriver;
+    }
+
+    /**
+     * @param typedriver the typedriver to set
+     */
+    public void setTypedriver(int typedriver) {
+        this.typedriver = typedriver;
     }
 }
