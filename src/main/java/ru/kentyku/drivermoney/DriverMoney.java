@@ -17,7 +17,7 @@ public class DriverMoney {
      */
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException {
         Logic l=new Logic();
-        l.selectcommand();        
+        l.selectCommand();        
     }
 
 }

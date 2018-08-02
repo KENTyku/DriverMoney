@@ -12,13 +12,13 @@ public class DriverHour extends Driver {
 
    
      DriverHour(String name,int typedriver,double cost){
-     this.Name=name;
+     this.name=name;
      this.cost=cost;
      this.typedriver=typedriver;
     }
      
      DriverHour(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     Double calculateMonthMoney() {        

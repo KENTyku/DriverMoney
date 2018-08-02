@@ -95,9 +95,8 @@ public class UseDataBaze {
         disconnect();
     }
 
-    void SortByMonthMoneyToMin() throws SQLException {
-        //показать весь список, отсортированный по убыванию месячной зарплаты
-        ArrayList<String> list = new ArrayList<String>();
+    void sortByMonthMoneyToMin() throws SQLException {
+        //показать весь список, отсортированный по убыванию месячной зарплаты        
         connect();
         rs = stmt.executeQuery("SELECT * FROM drivers ORDER BY monthmoney DESC,name ASC;");
         while (rs.next()) {//выводим на экран   
@@ -106,9 +105,8 @@ public class UseDataBaze {
         disconnect();
     }
 
-    void SortByMonthMoneyToMax() throws SQLException {
-        //показать весь список, отсортированный по возрастанию месячной зарплаты
-        ArrayList<String> list = new ArrayList<String>();
+    void sortByMonthMoneyToMax() throws SQLException {
+        //показать весь список, отсортированный по возрастанию месячной зарплаты        
         connect();
         rs = stmt.executeQuery("SELECT * FROM drivers ORDER BY monthmoney ASC,name ASC;");
         while (rs.next()) {//выводим на экран 
@@ -118,8 +116,7 @@ public class UseDataBaze {
     }
 
     void showNameMonthMoneyList() throws SQLException {
-        //показать список имен и месячных заработных плат
-        ArrayList<String> list = new ArrayList<String>();
+        //показать список имен и месячных заработных плат        
         connect();
         rs = stmt.executeQuery("SELECT name,monthmoney FROM drivers ORDER BY monthmoney ASC,name ASC;");
         while (rs.next()) {//выводим на экран 

@@ -11,13 +11,13 @@ package ru.kentyku.drivermoney;
 public class DriverMonth extends Driver {
 
     DriverMonth(String name, int typedriver, double cost) {
-        this.Name = name;
+        this.name = name;
         this.cost = cost;
         this.typedriver = typedriver;
     }
 
     DriverMonth(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     Double calculateMonthMoney() {

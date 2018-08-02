@@ -28,7 +28,7 @@ public class Logic {
     UseDataBaze udb = new UseDataBaze();//обработчик БД
     
     //консольный выбор команд
-    void selectcommand() throws ClassNotFoundException, SQLException, InterruptedException {
+    void selectCommand() throws ClassNotFoundException, SQLException, InterruptedException {
         //подключение БД и проверка ее корректности.
         udb.initDB();
         //консольный выбор команд
@@ -64,7 +64,7 @@ public class Logic {
             }
             //команда копирования списка водителей в файл 
             if (command.equals("copy")) {
-                SaveList();
+                saveList();
             }
 
             //команда загрузки списка водителей из файла 
@@ -160,7 +160,7 @@ public class Logic {
         }
     }
 
-    void SaveList() throws SQLException {
+    void saveList() throws SQLException {
         //Сохраняем список водителей из БД программы в файл.
         ArrayList<String> list = udb.readList();
         System.out.println("Введите имя файла для сохранения(без расширения)");
@@ -179,12 +179,12 @@ public class Logic {
 
     void sortToMin() throws SQLException {
         //сортировать водителей по убыванию среднемесячного заработка
-        udb.SortByMonthMoneyToMin();
+        udb.sortByMonthMoneyToMin();
     }
 
     void sortToMax() throws SQLException {
         //сортировать водителей по возрастанию среднемесячного заработка
-        udb.SortByMonthMoneyToMax();
+        udb.sortByMonthMoneyToMax();
     }
 
     void show() throws SQLException {
@@ -209,12 +209,9 @@ public class Logic {
         nameColumsIdeal.add("typedriver");
         nameColumsIdeal.add("cost");
         nameColumsIdeal.add("monthmoney");
-        System.out.println("line=" + line.length);
-        System.out.println("ideal=" + nameColumsIdeal.size());
+       //сравниваем с эталоном
         if (line.length == nameColumsIdeal.size()) {
             for (int i = 1; i < line.length; i++) {
-//                    System.out.println(nameColums.get(i) + " " + nameColumsIdeal.get(i));
-                System.out.println("line=" + line[i] + "ideal=" + nameColumsIdeal.get(i));
                 if (!(line[i].equals(nameColumsIdeal.get(i)))) {
                     ok = false;
                 }

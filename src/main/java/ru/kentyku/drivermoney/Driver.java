@@ -10,7 +10,7 @@ package ru.kentyku.drivermoney;
  */
 public class Driver {
 
-    protected String Name;//имя
+    protected String name;//имя
     protected Double cost;//ставка
     protected int typedriver;
     protected Double monthMoney;//месячная ЗП
@@ -22,17 +22,17 @@ public class Driver {
     }
 
     /**
-     * @return the Name
+     * @return the name
      */
     public String getName() {
-        return Name;
+        return name;
     }
 
     /**
-     * @param Name the Name to set
+     * @param Name the name to set
      */
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
 
     /**
